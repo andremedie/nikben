@@ -1,0 +1,33 @@
+<h1>Facebook Pixel till Nikben.com.</h1>
+
+Facebook Pixel Base Tag är installerad genom Google Tag Manager, som i sin tur är installerad i Nikben.com's header. 
+
+
+Följande funktioner går att installera för att Pixeln ska fungera till 100%, viktigaste är att AddToCart fungerar:
+0-  Search (Vi använder inte search på sidan, så denna stryks bort)
+1-  ViewCategory (Denna funktion är pausad i GTM)
+2-  ViewContent (Denna fungerar 100% och även funktionen PageView.)
+    
+
+3-  AddToCart (Här kommer error genom 'Facebook Pixel Helper' att "The recommended parameter 'value' is missing. We were expecting value for AddToCart and Purchase events. <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-audiences#setuppixel">Learn More</a> "
+    Koden för AddToCart funktionen som är installerad i GTM(Google Tag Manager):
+    
+    <script>
+fbq('track', 'AddToCart', {
+  content_type:'product',
+  content_name:'{{name}}', 
+  content_category:'{{category}}',
+  content_ids:'{{sku}}',
+  currency:'{{currencyCode2}}' 
+});
+</script>
+
+
+4-  Purchase (Ej installerad) 
+
+
+När man sedan prövar så att pixel-taggarna fungerar i Google Chromes instickningsfil 'Facebook Pixel Helper' så ger AddToCart ifrån sig error,
+men prövar man pixel-taggarna genom GTM's förhandsgransknings-verktyg, så triggas AddToCart korrekt(???). 
+
+
+Utöver detta så är produkterna rätt i Facebook Business, där vi hämtar produkterna ifrån. 
