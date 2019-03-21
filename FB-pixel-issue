@@ -1,16 +1,16 @@
-<h1>Facebook Pixel till Nikben.com.</h1>
+# Facebook Pixel till Nikben.com.
 
-Facebook Pixel Base Tag är installerad genom Google Tag Manager, som i sin tur är installerad i Nikben.com's header. 
+# Facebook Pixel Base Tag är installerad genom Google Tag Manager, som i sin tur är installerad i Nikben.com's header. 
 
 
-Följande funktioner går att installera för att Pixeln ska fungera till 100%, viktigast för våran del är att AddToCart fungerar:
+Följande funktioner måste installeras om det är möjligt - viktigast för våran del är att AddToCart fungerar:
 0-  Search (Vi använder inte search på sidan, så denna stryks bort)
 1-  ViewCategory (Denna funktion är pausad i GTM)
 2-  ViewContent (Denna fungerar 100% och även funktionen PageView.)
     
 
 3-  AddToCart (Här ger 'Facebook Pixel Helper' error att "The recommended parameter 'value' is missing. We were expecting value for AddToCart and Purchase events. <a href="https://developers.facebook.com/docs/marketing-api/dynamic-product-ads/product-audiences#setuppixel">Learn More</a> "
-    Koden för AddToCart funktionen som är installerad i GTM(Google Tag Manager):
+    Koden för AddToCart-funktionen som är installerad i GTM(Google Tag Manager) som triggas när man lägger in en produkt i varukorgen:
     
     <script>
 fbq('track', 'AddToCart', {
